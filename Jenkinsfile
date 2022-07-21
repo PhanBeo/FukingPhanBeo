@@ -1,8 +1,8 @@
+SERVER_CREDENTIALS = 'credentials:51ebb6df-9adb-49aa-8e45-0fd5cb881f58'
 pipeline{
     agent any
     environment{
         NEW_VERSION = '1.4.0'
-        CREDENTIALS = 'credentials:51ebb6df-9adb-49aa-8e45-0fd5cb881f58'
     }
     stages {
         stage ("git"){
