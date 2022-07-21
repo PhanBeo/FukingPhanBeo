@@ -23,11 +23,7 @@ pipeline{
         }
         stage ("deploy"){
             steps {
-                withCredentials([
-                    usernamePassword(credentialsId: '51ebb6df-9adb-49aa-8e45-0fd5cb881f58', 
-                    passwordVariable: 'dau020319', 
-                    usernameVariable: 'thanhdtg')])
-                sh 'echo deploying the app'
+               echo "deploying with ${SERVER_CREDELTIALS}"
             }
         }
     } 
