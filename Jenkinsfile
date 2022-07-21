@@ -2,7 +2,7 @@ pipeline{
     agent any
     environment{
         NEW_VERSION = '1.4.0'
-        CREDENTIALS = credentials('51ebb6df-9adb-49aa-8e45-0fd5cb881f58)'
+        CREDELTIALS = '51ebb6df-9adb-49aa-8e45-0fd5cb881f58'
     }
     stages {
         stage ("git"){
@@ -19,7 +19,7 @@ pipeline{
         stage ("test"){
             steps {
                 echo 'testing the app'
-                echo "testing the ${CREDENTIALS}"
+                echo "testing the ${CREDELTIALS}"
             }
         }
         stage ("deploy"){
