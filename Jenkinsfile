@@ -5,7 +5,7 @@ pipeline {
             steps{
                 echo "executing yarn"
                 nodejs('NodeJs') {
-                    sh 'npm install --global yarn'
+                    sh 'apt install --global yarn'
                 }
             }
         }
