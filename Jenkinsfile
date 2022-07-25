@@ -22,7 +22,8 @@ pipeline {
         }
         stage("deploy"){
             steps {
-                echo "deploying version ${VERSION}"
+                echo 'deploying the application'
+                echo "deploying version ${choice}"
             }
         }
     }
