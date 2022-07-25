@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage("build"){
             steps{
-                echo 'Binh Cho Dai')
+                echo 'Binh Cho Dai'
             }
         }
         stage("test"){
