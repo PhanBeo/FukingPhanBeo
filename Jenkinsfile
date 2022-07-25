@@ -1,9 +1,20 @@
 pipeline {
     agent any
     stages {
-        stage('Stage 1') {
-            steps {
-                git 'https://github.com/PhanBeo/ThanhDTg.git'
+        stage("run frontend"){
+            steps{
+                echo "executing yarn"
+                nodejs('NodeJs') {
+                    sh 'yarn install'
+                }
+            }
+        }
+        stage("run backend"){
+            steps{
+                echo "executing gradle"
+                withGradle(){
+                    sh './gradlew -v'
+                }
             }
         }
     }
