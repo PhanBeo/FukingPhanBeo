@@ -4,7 +4,7 @@ pipeline {
     tools {
         gradle 'Gradle'
     }
-    
+
     stages {
         stage("run frontend"){
             steps{
@@ -18,7 +18,7 @@ pipeline {
             steps{
                 echo "executing gradle"
                 withGradle(){
-                    sh './gradlew -v'
+                    sh 'gradlew -v'
                 }
             }
         }
